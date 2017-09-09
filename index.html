@@ -629,6 +629,14 @@ Thanks for your time!
     <script src="remark-latest.min.js"></script>
     <script>
         var slideshow = remark.create();
+
+        setInterval(function () {carousel(slideshow)}, 15000);
+
+        function carousel(varObject) {
+          var slideCount = varObject.getSlideCount()-1;
+          var currentSlide = varObject.getCurrentSlideIndex();
+          varObject.gotoNextSlide();
+        }
     </script>
   </body>
 </html>
